@@ -1,0 +1,90 @@
+const maps = [
+	`UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUTTTTTTUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUTTTTTTTTTTTUUUUUUUUUUUUUUUUUUUUUUUUUUUTTTTTTPTTTTTTTTUUUUUUUUUUUUUUUUUUUUUUUTTTTTTTTTTTTTTTTTTUUUUUUUUUUUUUUUUUUUUUUTTTMMMMMMMMMMMMTTTUUUUUUUUUUUUUUUUUUUUUTTTTMMMMMMMMMMMMTTTTUUUUUUUUUUUUUUUUUUUUTTTTMEEEEEEEEEEMTTTTUUUUUUUUUUUUUUUUUUUTTTTTMEEEEEEEEEEMTTTTUUUUUUUUUUUUUUUUUUUTTTTTMEEEEEEEEEEMTTTTUUUUUUUUUUUUUUUUUUTTPTTTMEEEEEEEEEEMTTTTTUUUUUUUUUEEUUUUUUTTTTTTMEEEEEEEEEEMTTTTTUUUUUUUUUEEEUUUUUUTTTTTMEEEEEEEEEEMTTTTTUUUUUUUUUEEOUUUUUUTTTTTMMMMMMEMMMMMTTPTTUUUUUUUUEEEEEUUUUUUTTPTMMMMMMIMMMMMTTTTUUUUUUUUEEOEEEUUUUUUTTTTTTTTTTTTTTTTTTTUUUUUUUUUEEEEEEUUUUUUUTTTTTTTTTTTTTTTTTUUUUUUUUUUEOEEEUUUUUUUUUTTTTTTTTTPTTTUUUUUUUUUUUUEEEWWUUUUUUUUUUUTTTTTTTTTTUUUUUUUUUUUUUUEEEGGQUUUUUUUUUUUUTTTTUUUUUUUUUUUUUUUUUUUEEGGGQUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUHGGGQUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUHJGGGQUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUHHHGGQUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU`
+]
+
+const textures = {
+	'B': {
+		class: 'b',
+		passable: false
+	},
+	'N': {
+		class: 'n',
+		passable: false
+	},
+	'M': {
+		class: 'm',
+		passable: false
+	},
+	'Z': {
+		class: 'z',
+		passable: false
+	},
+	'D': {
+		class: 'd',
+		passable: false
+	},
+	'S': {
+		class: 's',
+		passable: false
+	},
+	'G': {
+		class: 'g',
+		passable: true
+	},
+	'H': {
+		class: 'h',
+		passable: true
+	},
+	'J': {
+		class: 'j',
+		passable: false
+	},
+	'Q': {
+		class: 'q',
+		passable: true
+	},
+	'W': {
+		class: 'w',
+		passable: true
+	},
+	'E': {
+		class: 'e',
+		passable: true
+	},
+	'R': {
+		class: 'r',
+		passable: true
+	},
+	'T': {
+		class: 't',
+		passable: true
+	},
+	'Y': {
+		class: 'y',
+		passable: true
+	},
+	'U': {
+		class: 'u',
+		passable: true
+	},
+	'I': {
+		class: 'i',
+		passable: true
+	},
+	'O': {
+		class: 'o',
+		passable: true
+	},
+	'P': {
+		class: 'p',
+		passable: true
+	},
+	'L': {
+		class: 'l',
+		passable: true
+	},
+	'@': {
+		class: 'empty',
+		passable: true
+	}
+};

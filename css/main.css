@@ -1,0 +1,238 @@
+/* @font-face {
+  font-family: 'Advanced Pixel-7';
+  src: url('advanced_pixel-7.ttf')  format('truetype');
+} */
+
+body {
+  font-family: 'Proxima Nova';
+  font-size: 16px;
+  background-color: #497149;
+  overflow: hidden;
+}
+
+.sidebar {
+  width: 300px;
+  background-color: #f0f0f0;
+  display: inline-block;
+  padding: 10px;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  overflow-y: scroll;
+  font-size: 14px;
+}
+
+h1, h2, h3, h4 {
+  display: block;
+  padding: 5px 0;
+  margin: 0;
+  font-size: 16px;
+  border-bottom: 1px solid #dddddd;
+  margin-bottom: 10px;
+}
+
+ul {
+  padding: 0;
+}
+
+ul li {
+  width: 40px;
+  height: 40px;
+  border: 2px solid #dddddd;
+  display: inline-block;
+  text-align: center;
+  line-height: 40px;
+  margin: 4px 2px;
+  font-size: 0;
+  vertical-align: top;
+  cursor: pointer;
+}
+
+ul li .box {
+  margin-top: 8px;
+}
+
+.container {
+  width: 1040px;
+  height: 520px;
+  border: 1px solid #d0d0d0;
+  display: inline-block;
+  vertical-align: top;
+  font-size: 0;
+  position: relative;
+}
+
+.map {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 0;
+  position: absolute;
+  opacity: .8;
+}
+
+
+.view-box {
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: top;
+  font-size: 0;
+  position: relative;
+}
+
+.box {
+  box-sizing: border-box;
+  display: inline-block;
+  height: 26px;
+  width: 26px;
+}
+
+.empty {
+  border: 1px solid #d0d0d0;
+}
+.empty:hover {
+  border: 1px solid #a0a0a0;
+  cursor: pointer;
+}
+
+textarea {
+  font-size: 10px;
+}
+
+.b {
+  background: url('textures/1.png') no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+.n {
+  background: url('textures/2.png') no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+.m {
+  background: url('textures/3.png') no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+.z {
+  background: url('textures/4.png') no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+.d {
+  background: url('textures/5.png') no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+.s {
+  background: url('textures/6.png') no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+.g {
+  background: url('textures/7.png') no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+.h {
+  background: url('textures/8.png') no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+.j {
+  background: url('textures/9.png') no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+.q {
+  background: url('textures/10.png') no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+.w {
+  background: url('textures/11.png') no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+.e {
+  background: url('textures/12.png') no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+.r {
+  background: url('textures/13.png') no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+.t {
+  background: url('textures/14.png') no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+.y {
+  background: url('textures/15.png') no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+.u {
+  background: url('textures/16.png') no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+.i {
+  background: url('textures/17.png') no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+.o {
+  background: url('textures/18.png') no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+.p {
+  background: url('textures/19.png') no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+.l {
+  background: url('textures/20.png') no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+
+
+.pers {
+  position: absolute;
+  background: url(pers.png)
+}
+.pers::before {
+  position: absolute;
+  top: -18px;
+  opacity: 0.8;
+  left: 0px;
+  height: 16px;
+  background-color: tomato;
+  border-radius: 3px;
+  line-height: 16px;
+  width: 26px;
+  display: inline-block;
+  content: attr(data-name);
+  font-size: 11px;
+  text-align: center;
+  color: #fff;
+}
+/* .pers::after {
+  position: absolute;
+  top: -8px;
+  left: -10px;
+  height: 4px;
+  width: 46px;
+  display: inline-block;
+  content: '';
+  border: 1px solid #000;
+  box-sizing: border-box;
+  border-radius: 3px;
+  background-color: tomato;
+  text-align: center;
+} */
