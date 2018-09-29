@@ -22,14 +22,13 @@ function renderMap(str) {
 
         x++;
 
-		htmlMap += `<span id="${x}T${y}" class="box ${textures[pixel].class}"></span>`;
+        htmlMap += `<span id="${x}T${y}" class="box ${textures[pixel].class}"></span>`;
 
-		continue;
-	}
+        continue;
+    }
 
     map.innerHTML = `<div class="row">${htmlMap}</div>`;
 }
-
 
 function checkPixel(x, y) {
     return textures[trimMap[(y - 1) * MAP_WIDTH + x - 1]].passable;

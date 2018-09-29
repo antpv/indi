@@ -41,28 +41,56 @@ function createGeneralUser(options) {
 
 function moveMapX(userPosition) {
     if (MAP_WIDTH - VIEWBOX_WIDTH + (Math.floor(VIEWBOX_WIDTH/2) + 1) < userPosition) {
-        map.style.left = `-${getPositionFromCoordsMap(MAP_WIDTH - VIEWBOX_WIDTH)}px`
+        TweenMax.to(map, 0.150, {
+            left: `-${getPositionFromCoordsMap(MAP_WIDTH - VIEWBOX_WIDTH)}px`,
+            onComplete: function() { 
+                console.log('complete')
+        }})
     } else if ((1 - userPosition) + (Math.floor(VIEWBOX_WIDTH/2)) > 0) {
-        map.style.left = `0px`
+        TweenMax.to(map, 0.150, {
+            left: `0px`,
+            onComplete: function() { 
+                console.log('complete')
+        }})
     } else {
-        map.style.left = `${getPositionFromCoordsMap((1 - userPosition) + (Math.floor(VIEWBOX_WIDTH/2)))}px`
+        TweenMax.to(map, 0.150, {
+            left: `${getPositionFromCoordsMap((1 - userPosition) + (Math.floor(VIEWBOX_WIDTH/2)))}px`,
+            onComplete: function() { 
+                console.log('complete')
+        }})
     }
 }
+
 function moveMapY(userPosition) {
     if (MAP_HEIGTH - VIEWBOX_HEIGTH + (Math.ceil(VIEWBOX_HEIGTH/2)) < userPosition) {
-        map.style.top = `-${getPositionFromCoordsMap(MAP_HEIGTH - VIEWBOX_HEIGTH)}px`
+        TweenMax.to(map, 0.150, {
+            top: `-${getPositionFromCoordsMap(MAP_HEIGTH - VIEWBOX_HEIGTH)}px`,
+            onComplete: function() { 
+                console.log('complete')
+        }})
     } else if ((1 - userPosition) + (Math.round(VIEWBOX_HEIGTH/2) - 1) > 0) {
-        map.style.top = `-0px`
+        TweenMax.to(map, 0.150, {
+            top: `0px`,
+            onComplete: function() { 
+                console.log('complete')
+        }})
     } else {
-        map.style.top = `-${getPositionFromCoordsMap(userPosition - (Math.ceil(VIEWBOX_HEIGTH/2)))}px`
+        TweenMax.to(map, 0.150, {
+            top: `-${getPositionFromCoordsMap(userPosition - (Math.ceil(VIEWBOX_HEIGTH/2)))}px`,
+            onComplete: function() { 
+                console.log('complete')
+        }})
     }
 }
+
 function getPositionFromCoords(value) {
     return (value - 1) * BOX_SIZE;
 }
+
 function getPositionFromCoordsMap(value) {
     return (value - 0) * BOX_SIZE;
 }
+
 function spaun(user) {    
     let pers = document.createElement('span');
         pers.classList.add('box')
@@ -77,6 +105,7 @@ function spaun(user) {
 
     return pers;
 }
+
 function CreateControlUser(user) {
     this.currentX = user.startX;
     this.currentY = user.startY;
@@ -89,13 +118,11 @@ function CreateControlUser(user) {
 
         let position = getPositionFromCoords(x);
 
-        // TweenMax.to(pers, 0.150, {
-        //     left: `${position}px`,
-        //     onComplete: function() { 
-        //         console.log('complete')
-        // }})
-
-        pers.style.left = `${position}px`
+        TweenMax.to(pers, 0.150, {
+            left: `${position}px`,
+            onComplete: function() { 
+                console.log('complete')
+        }})
 
         this.currentX = x;
         moveMapX(x)
@@ -105,20 +132,18 @@ function CreateControlUser(user) {
         }
     })
 
-
     Object.defineProperty(this, 'y', {
         set: function(y) {
             //запрос на сервер и отправка новых координат
 
         let position = getPositionFromCoords(y);
 
-        // TweenMax.to(pers, 0.150, {
-        //     top: `${position}px`,
-        //     onComplete: function() { 
-        //         console.log('complete')
-        // }})
+        TweenMax.to(pers, 0.150, {
+            top: `${position}px`,
+            onComplete: function() { 
+                console.log('complete')
+        }})
 
-        pers.style.top = `${position}px`
 
         this.currentY = y;
         moveMapY(y)

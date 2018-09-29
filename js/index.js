@@ -22,7 +22,6 @@ let user = createGeneralUser({
     }
 });
 
-
 function telephort(x, y) {
     user.x = x;
     user.y = y;
