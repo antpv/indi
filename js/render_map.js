@@ -1,3 +1,5 @@
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
 let trimMap = null;
 
 function trim(str, map) {
@@ -5,29 +7,30 @@ function trim(str, map) {
     return trimMap;
 }
 
+// const BOX_SIZE = 26;
+// const MAP_WIDTH = 40;
+// const MAP_HEIGTH = 24;
+
 function renderMap(str) {
     str = trim(str);
-    let htmlMap = '';
+    
+	ctx.fillStyle = 'rgb(0,0,0)';
+    ctx.fillRect(0, 0, BOX_SIZE * MAP_WIDTH, BOX_SIZE * MAP_HEIGTH);
+    
     let x = 0;
-    let y = 1;
+    let y = 0;
 
     for (let i = 0; i < str.length; i++) {
-        let pixel = str[i];
 
         if (i > 0 && i % MAP_WIDTH == 0) {
-            htmlMap += '</div><div class="row">';
-            y++;
+            y += BOX_SIZE;
             x = 0;
         }
 
-        x++;
+        ctx.drawImage(textures[str[i].toUpperCase()].image, x, y, BOX_SIZE, BOX_SIZE);
 
-        htmlMap += `<span id="${x}T${y}" class="box ${textures[pixel].class}"></span>`;
-
-        continue;
+        x += BOX_SIZE;
     }
-
-    map.innerHTML = `<div class="row">${htmlMap}</div>`;
 }
 
 function checkPixel(x, y) {

@@ -1,4 +1,5 @@
-const map = document.getElementById('map');
+const mapWrapper = document.getElementById('wrapper');
+const map = document.getElementById('canvas');
 const viewBox = document.getElementById('view-box');
 
 const BOX_SIZE = 26;
@@ -8,7 +9,9 @@ const MAP_HEIGTH = 24;
 const VIEWBOX_WIDTH = 26;
 const VIEWBOX_HEIGTH = 15;
 
-renderMap(maps[0], map);
+document.addEventListener('texturesLoaded', function() {
+    renderMap(maps[0]);
+})
 
 map.focus()
 
