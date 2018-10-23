@@ -1,3 +1,3 @@
 # indi game
 
-demo: https://antpv.github.io/indi/
+demo: https://antpv.github.io/indi/game.html
